@@ -141,6 +141,7 @@
     top: -30px;
 }
 
+
 .header__noti::after {
     content: "";
     display: block;
