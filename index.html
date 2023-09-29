@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
         integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
@@ -23,8 +24,8 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--qr header__navbar-item--separate">
                             Donate cho Tùng mua Xlim Pro
@@ -125,13 +126,17 @@
                 </nav>
 
                 <div class="header-with-search">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                    </label>
+
                     <div class="header__logo">
-                        <a href="/Project 1/" class="header__logo-link">
+                        <a href="#" class="header__logo-link">
                             <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AITFw-zX5jbPnMGJJgHS2M1C3tYcae_tImZNGn6msHJFEG_VWBdis9QTUhPgOiFAq1wcUo_ytpKEc3urVe3RBLctvUoblrwpMg=w1920-h917"
                                 alt="" class="header__logo-img">
                         </a>
                     </div>
-                    <div class="header__search">
+                    <div class="header__search hide-on-mobile">
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input" placeholder="Tìm em trong bóng đêm">
                             <div class="header__search-history">
@@ -175,9 +180,24 @@
                     </div>
                 </div>
             </div>
+
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quân</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên minh</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link header__sort-link--active">Bán trạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
         </header>
         <div class="app__container">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row app__content">
                     <div class="grid__column-2">
                         <nav class="category">
@@ -203,7 +223,7 @@
                         </nav>
                     </div>
                     <div class="grid__column-10">
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phiển bố</button>
                             <button class="home-filter__btn btn btn--primary">Mới nhứt</button>
@@ -683,7 +703,7 @@
         </div>
 
         <div class="footer">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row">
                     <div class="grid__column-2-4">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
@@ -767,7 +787,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid">
+                <div class="grid wide">
                     <p class="footer__copyright">© 2023 - Bản quyền thuộc về RSV Corp.</p>
                 </div>
             </div>

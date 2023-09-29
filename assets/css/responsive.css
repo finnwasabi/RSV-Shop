@@ -1,0 +1,131 @@
+/* Mobile & Tablet */
+@media (max-width:1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    :root {
+        --header-height: 90px;
+        --navbar-height: 0px;
+    }
+
+    .header__sort-bar {
+        display: flex;
+    }
+
+    /* Tablet */
+    @media (min-width:740px) and (max-width:1023px) {
+        .hide-on-tablet {
+            display: none;
+        }
+
+        .header {
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+        .header__cart {
+            width: 55px;
+            text-align: right;
+        }
+
+        .header__cart-icon {
+            text-align: right;
+        }
+
+        .header__cart-wrap {
+            padding: 0;
+        }
+
+        .header__cart-list {
+            text-align: center;
+            width: 300px;
+        }
+
+        .header__cart-list--empty {
+            padding: 12px 0;
+        }
+
+        .header__cart-list::after {
+            top: -27px;
+        }
+
+        .header__logo {
+            box-sizing: border-box;
+            width: 110px;
+            display: flex;
+            text-align: left;
+        }
+
+        .header__logo-img {
+            width: 90%;
+        }
+
+        .app__container {
+            margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width:739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .header-with-search {
+        justify-content: space-between;
+    }
+
+    .header__logo {
+        box-sizing: border-box;
+        width: 110px;
+        display: flex;
+        text-align: center;
+    }
+
+    .header__logo-img {
+        width: 90%;
+    }
+
+    .header__cart {
+        width: 55px;
+        text-align: right;
+        z-index: 2;
+    }
+
+    .header__cart-icon {
+        text-align: right;
+    }
+
+    .header__cart-wrap {
+        padding: 0;
+    }
+
+    .header__cart-list {
+        text-align: center;
+        width: 300px;
+    }
+
+    .header__cart-list--empty {
+        padding: 12px 0;
+        z-index: 10;
+    }
+
+    .header__cart-list::after {
+        top: -27px;
+    }
+
+    .app__container {
+        margin-top: var(--header-sort-bar-height);
+    }
+}
