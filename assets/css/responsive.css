@@ -212,4 +212,27 @@
     .footer__content {
         padding: 0 16px;
     }
+
+    .footer__heading {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .footer__download,
+    .footer__list-item-link {
+        justify-content: center;
+    }
+
+    .footer__download-apps {
+        flex: unset;
+    }
+
+    .footer__download-app-link {
+        display: block;
+        padding: 6px 8px;
+    }
+
+    .footer__copyright {
+        margin-top: 60px;
+    }
 }
