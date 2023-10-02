@@ -1,3 +1,7 @@
+.app {
+    overflow: hidden;
+}
+
 .header {
     height: var(--header-height);
     background-image: linear-gradient(180deg, #2374e1, #74acf5);
@@ -368,6 +372,7 @@
 }
 
 .header__mobile-search {
+    display: none;
     padding: 0 12px;
 }
 
@@ -431,6 +436,7 @@
     display: inline-block;
     padding: 0 8px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__cart-list {
@@ -682,6 +688,7 @@
 
 .header__sort-link--active {
     color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .app__container {
@@ -749,6 +756,62 @@
 .category-item__link:hover {
     left: 4px;
     color: var(--primary-color);
+}
+
+.mobile-category {
+    display: none;
+}
+
+.mobile-category__list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.mobile-category__list::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-category__item {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.mobile-category__item:nth-child(3n + 1) .mobile-category__link {
+    background-color: #87afd8;
+}
+
+.mobile-category__item:nth-child(3n + 2) .mobile-category__link {
+    background-color: #76c9bd;
+}
+
+.mobile-category__item:nth-child(3n + 3) .mobile-category__link {
+    background-color: #88cf81;
+}
+
+.mobile-category__link {
+    --line-height: 2rem;
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: var(--line-height);
+    height: calc(var(--line-height) * 2);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    width: 110px;
+    border-radius: 5px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    padding: 0 5px;
 }
 
 .home-filter {
@@ -1006,6 +1069,7 @@ i.home-product-item__like-icon-fill {
 .home-product__pagination {
     margin-top: 45px;
     margin-bottom: 40px;
+    padding-left: 0;
 }
 
 .footer {

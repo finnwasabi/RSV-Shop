@@ -23,6 +23,10 @@ html {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 .grid__row {
     display: flex;
     flex-wrap: wrap;
